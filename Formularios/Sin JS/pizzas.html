@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pizzas</title>
+  </head>
+  <body>
+    <form id="form-2">
+      <label for="pizzaSize">Tamaño de la Pizza:</label>
+      <select id="pizzaSize" name="pizzaSize">
+        <option value="small">Pequeña</option>
+        <option value="medium">Mediana</option>
+        <option value="large">Grande</option></select
+      ><br />
+      <br />
+
+      <label>Ingredientes Favoritos:</label><br />
+      <input type="checkbox" id="pepperoni" name="topping" value="pepperoni" />
+      <label for="pepperoni">Pepperoni</label><br />
+      <input type="checkbox" id="mushrooms" name="topping" value="mushrooms" />
+      <label for="mushrooms">Hongos</label><br />
+      <input type="checkbox" id="pineapple" name="topping" value="pineapple" />
+      <label for="pineapple">Piña</label><br /><br />
+
+      <fieldset style="width: 190px">
+        <legend>¿Borde Relleno de Queso?</legend>
+        <div>
+          <input type="radio" id="option1" name="cheese" value="yes" checked />
+          <label for="option1">Sí</label>
+        </div>
+        <div>
+          <input type="radio" id="option2" name="cheese" value="no" />
+          <label for="option2">No</label>
+        </div>
+      </fieldset>
+      <br />
+      <button type="submit">¡Ordenar Pizza!</button>
+    </form>
+  </body>
+</html>
