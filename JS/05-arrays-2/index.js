@@ -25,6 +25,7 @@ const biblioteca = [
 
 // Utilizar 'map' para obtener un arreglo con los títulos de los libros
 // console.log('Títulos de libros:', titulosLibros);
+// console.log(biblioteca.map(({ titulo }, i, arr) => ({ titulo })));
 
 // Utilizar 'filter' para obtener los libros del género 'Fantasía'
 // console.log('Libros de fantasía:', librosFantasia);
