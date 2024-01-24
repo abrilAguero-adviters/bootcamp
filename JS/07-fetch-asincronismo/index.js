@@ -10,19 +10,19 @@ const obtenerDatosDeAPI = (url) => {
 };
 
 const main = () => {
-  const url = 'https://jsonplaceholder.typicode.com/todos/1';
+  const url = "https://jsonplaceholder.typicode.com/todos/1";
 
-  console.log('Iniciando la solicitud de datos...');
+  console.log("Iniciando la solicitud de datos...");
 
   obtenerDatosDeAPI(url)
     .then((data) => {
-      console.log('Datos obtenidos con éxito:', JSON.stringify(data, null, 2));
+      console.log("Datos obtenidos con éxito:", JSON.stringify(data, null, 2));
     })
     .catch((error) => {
-      console.error('Error al obtener datos:', error);
+      console.error("Error al obtener datos:", error);
     });
 
-  console.log('Solicitud de datos en progreso...');
+  console.log("Solicitud de datos en progreso...");
 };
 
 main();
