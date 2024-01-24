@@ -10,7 +10,8 @@ const obtenerDatosDeAPI = (url) => {
 };
 
 const main = () => {
-  const url = "https://jsonplaceholder.typicode.com/todos/1";
+  // const url = 'https://jsonplaceholder.typicode.com/todos/1';
+  // const url = 'https://pokeapi.co/api/v2/pokemon?limit=10&offset=0';
 
   console.log("Iniciando la solicitud de datos...");
 

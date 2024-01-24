@@ -1,29 +1,35 @@
-// function operacionAsincronica(mensaje, tiempo) {
-//   return new Promise((resolve, reject) => {
-//     console.log(`Iniciando operación: ${mensaje}`);
-//     const random = Math.round(Math.random() * 50);
-//     console.log(`NUMERO: ${random}`);
+function operacionAsincronica(mensaje, tiempo) {
+  return new Promise((resolve, reject) => {
+    console.log(`Iniciando operación: ${mensaje}`);
+    const numeroRandom = Math.round(Math.random() * 50);
+    console.log(`NUMERO: ${numeroRandom}`);
 
-//     setTimeout(() => {
-//       if (random % 2 !== 0) {
-//         console.log(`Operación rechazada paso 2: ${mensaje}`);
-//         reject(`Numero par: ${random}`);
-//       } else {
-//         console.log(`Operación completada paso 2: ${mensaje}`);
-//         resolve(random);
-//       }
-//     }, tiempo);
-//   });
-// }
+    setTimeout(() => {
+      if (numeroRandom % 2 !== 0) {
+        console.log(`Operación rechazada paso 2: ${mensaje}`);
+        reject(`Numero impar: ${numeroRandom}`);
+      } else {
+        console.log(`Operación completada paso 2: ${mensaje}`);
+        resolve(numeroRandom);
+      }
+    }, tiempo);
+  });
+}
 
-// function ejecutarOperaciones() {
-//   operacionAsincronica('rana', 3000)
-//     .then((resultado) => {
-//       console.log(`Resultado de la operación: ${resultado}`);
-//     })
-//     .catch((error) => {
-//       console.error('Error:', error);
-//     });
-// }
+async function ejecutarOperaciones() {
+  const promesa = operacionAsincronica('rana', 1000)
+    .then((resultado) => {
+      console.log(`Resultado de la operación: ${resultado}`);
+      return resultado;
+    })
+    .catch((error) => {
+      console.error('Error:', error);
+    })
+    .finally(() => {
+      console.log('Bootcamp Adviters');
+    });
 
-// ejecutarOperaciones();
+  console.log(promesa);
+}
+
+ejecutarOperaciones();
